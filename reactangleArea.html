@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rectangle Area Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/calculator.png" />
+    <script type="text/javascript">
+      function rectangleAreaCalculator() {
+        const length = document.getElementById("input-box-1").value;
+        const breadth = document.getElementById("input-box-2").value;
+        const unit = document.getElementById("input-box-3").value;
+        const area = length * breadth;
+        alert(
+          `Solution:\n= length × breadth\n= ${length} × ${breadth}\n\n∴ Area of Rectangle: ${area} ${unit.toLowerCase()}²`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Rectangle Area Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input id="input-box-1" placeholder="Enter Length" type="number" />
+    <input id="input-box-2" placeholder="Enter Breadth" type="number" />
+    <input id="input-box-3" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="rectangleAreaCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+  </body>
+</html>

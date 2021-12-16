@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Square Area Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/calculator.png" />
+    <script type="text/javascript">
+      function squareAreaCalculator() {
+        const side = document.getElementById("input-box-1").value;
+        const unit = document.getElementById("input-box-2").value;
+        const area = side * side;
+        alert(
+          `Solution:\n= (side)²\n= side × side\n= (${side})²\n= ${side} × ${side}\n\n∴ Area of Rectangle: ${area} ${unit.toLowerCase()}²`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Square Area Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input
+      id="input-box-1"
+      placeholder="Enter the side of Square"
+      type="number"
+    />
+    <input id="input-box-2" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="squareAreaCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+  </body>
+</html>

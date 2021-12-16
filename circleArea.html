@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Area Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/calculator.png" />
+    <script type="text/javascript">
+      function triangleAreaCalculator() {
+        const radius = document.getElementById("input-box-1").value;
+        const unit = document.getElementById("input-box-2").value;
+        const area = (22 / 7) * radius * radius;
+        alert(
+          `Solution:\n= π × (radius)²\n= π × radius × radius\n= 22/7 × ${radius} × ${radius}\n\n∴ Area of Circle: ${area} ${unit.toLowerCase()}²`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Circle Area Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input id="input-box-1" placeholder="Enter Radius" type="number" />
+    <input id="input-box-2" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="triangleAreaCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+  </body>
+</html>

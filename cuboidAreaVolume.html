@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuboid Surface Area Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/calculator.png" />
+    <script type="text/javascript">
+      function cuboidSurfaceAreaCalculator() {
+        const length = document.getElementById("input-box-1").value;
+        const breadth = document.getElementById("input-box-2").value;
+        const height = document.getElementById("input-box-3").value;
+        const unit = document.getElementById("input-box-4").value;
+        const area =
+          length * breadth +
+          length * breadth +
+          length * height +
+          length * height +
+          breadth * height +
+          breadth * height;
+        alert(
+          `Solution:\n= 2(length × breadth + length × height + breadth × height)\n= 2(${length} × ${breadth} + ${length} × ${height} + ${breadth} × ${height})\n\n∴ Surface Area of Cuboid: ${area} ${unit.toLowerCase()}²`
+        );
+      }
+
+      function cuboidVolumeCalculator() {
+        const length = document.getElementById("input-box-1a").value;
+        const breadth = document.getElementById("input-box-2a").value;
+        const height = document.getElementById("input-box-3a").value;
+        const unit = document.getElementById("input-box-4a").value;
+        const volume = length * breadth * height;
+        alert(
+          `Solution:\n= length × breadth × height\n= ${length} × ${breadth} × ${height}\n\n∴ Volume of Cuboid: ${volume} ${unit.toLowerCase()}³`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Cuboid Surface Area Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input id="input-box-1" placeholder="Enter Length" type="number" />
+    <input id="input-box-2" placeholder="Enter Breadth" type="number" />
+    <input id="input-box-3" placeholder="Enter Height" type="number" />
+    <input id="input-box-4" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="cuboidSurfaceAreaCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+    <h1>Cuboid Volume Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input id="input-box-1a" placeholder="Enter Length" type="number" />
+    <input id="input-box-2a" placeholder="Enter Breadth" type="number" />
+    <input id="input-box-3a" placeholder="Enter Height" type="number" />
+    <input id="input-box-4a" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="cuboidVolumeCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+  </body>
+</html>

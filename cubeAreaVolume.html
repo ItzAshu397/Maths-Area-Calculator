@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Surface Area Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/calculator.png" />
+    <script type="text/javascript">
+      function cubeSurfaceAreaCalculator() {
+        const edge = document.getElementById("input-box-1").value;
+        const unit = document.getElementById("input-box-2").value;
+        const area = 6 * edge * edge;
+        alert(
+          `Solution:\n= 6 × edge²\n= 6 × edge × edge\n= 6 × ${edge}²\n= 6 × ${edge} × ${edge}\n\n∴ Surface Area of Cube: ${area} ${unit.toLowerCase()}²`
+        );
+      }
+
+      function cubeVolumeCalculator() {
+        const edge = document.getElementById("input-box-1a").value;
+        const unit = document.getElementById("input-box-2a").value;
+        const volume = edge * edge * edge;
+        alert(
+          `Solution:\n= (edge)³\n= edge × edge × edge\n= (${edge})³\n= ${edge} × ${edge} × ${edge}\n\n∴ Volume of Cube: ${volume} ${unit.toLowerCase()}³`
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Cube Surface Area Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input
+      id="input-box-1"
+      placeholder="Enter the Edge of Cube"
+      type="number"
+    />
+    <input id="input-box-2" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="cubeSurfaceAreaCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+    <h1>Cube Volume Calculator</h1>
+    <p>Make sure you enter only<br />numbers in the input box below</p>
+    <input
+      id="input-box-1a"
+      placeholder="Enter the Edge of Cube"
+      type="number"
+    />
+    <input id="input-box-2a" placeholder="Enter Unit eg: cm" />
+    <br />
+    <button id="input-button" onclick="cubeVolumeCalculator()">
+      Calculate
+    </button>
+    <br />
+    <a href="./index.html"
+      ><button id="back-button">Back to Home Page</button></a
+    >
+  </body>
+</html>
